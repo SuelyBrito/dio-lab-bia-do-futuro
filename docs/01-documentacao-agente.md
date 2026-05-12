@@ -139,7 +139,7 @@ Responsável por:
 Estratégias Anti-Alucinação
 O agente:
 -	responde apenas com base nos documentos fornecidos;
--	utiliza RAG (Retrieval-Augmented Generation);
+- O agente utilizará arquitetura RAG (Retrieval-Augmented Generation), permitindo que as respostas sejam geradas com base em documentos oficiais do plano PREV, política de       investimentos e materiais institucionais da EFPC. Dessa forma, a IA reduz alucinações e aumenta a confiabilidade das respostas.
 -	cita a fonte utilizada na resposta;
 -	informa quando não possui dados suficientes e redireciona;
 -	evita inferências não documentadas.
