@@ -6,15 +6,43 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `extrato_opçoes_instituto.pdf` | PDF | opções previdenciárias realizadas pelo participante após desligamento da patrocinadora ou alteração do vínculo empregatício |
+| `alteracao_perfil_investimento.pdf` | PDF |registros de mudança de perfil de investimento do participante |
+| `extrato_contribuicão.pdf` | PDF | histórico de contribuições mensais realizadas pelo participante e patrocinadora |
+| `estatuto_social_alpha.pdf` | PDF | Documento institucional |
+| `desempenho_dos_investimentos.pdf` | PDF | Documento contendo:	rentabilidade dos perfis,	composição da carteira,	indicadores financeiros |
+| `regulamento_dos_planos.pdf` | PDF | Documento contendo regras do plano previdenciário |
+| `politica_investimento_alpha.pdf` | PDF |Documento contendo as diretrizes de gestão dos recursos garantidores do plano previdenciário  |                                       
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
 
 ---
+
+## Arquivos Utilizados
+
+### 1. Extrato de Operações
+Arquivo contendo movimentações financeiras do participante, incluindo:
+-	contribuições
+-	portabilidades
+-	resgates
+-	rentabilidade
+-	saldos
+-	empréstimos (quando aplicável)
+
+Objetivo no agente:
+Permitir análise da evolução financeira do participante e contextualizar respostas sobre histórico previdenciário
+
+### 2. Alteração de Perfil de Investimentos
+Documento com registros de mudança de perfil de investimento do participante.
+Exemplos:
+-	conservador
+-	moderado
+-	agressivo
+Objetivo no agente:
+Auxiliar em recomendações educativas e explicar impactos de risco, volatilidade e horizonte de investimento.
+
+
 
 ## Adaptações nos Dados
 
