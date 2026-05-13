@@ -133,42 +133,179 @@ As seguintes modificações foram aplicadas:
 
 ### Como os dados são carregados?
 
-Os documentos da base de conhecimento são armazenados na pasta data do projeto e carregados no início da execução do agente.
 
-Os arquivos estruturados (CSV e JSON) são lidos diretamente pela aplicação para acesso às informações de participantes, contribuições e perfis de investimento.
+Os dados do participante são armazenados em arquivos estruturados no formato JSON e CSV dentro da pasta data do projeto.
+No início da execução, o agente realiza a leitura desses arquivos para obter informações necessárias à contextualização das respostas, como:
 
-Já os documentos institucionais em PDF, como regulamento do plano, estatuto social e política de investimentos, passam por extração de texto para que seu conteúdo possa ser utilizado pelo agente durante as respostas.
+- perfil do participante
+- situação previdenciária
+- contribuições
+- perfil de investimentos
+- opções por institutos
 
-Os documentos utilizados incluem:
-
-- extrato de opções de instituto
-- alteração de perfil de investimentos
-- extrato de contribuição
-- estatuto social da ALPHA
-- relatório de desempenho dos investimentos
-- regulamento do Plano Prev
-- política de investimentos
+Os documentos institucionais e normativos em PDF também são carregados e processados para consulta contextual durante as interações.
 
 
 ### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados do participante são usados para contextualizar e personalizar as respostas do agente.
 
----
+Informações básicas, como perfil de investimento, status no plano e resumo contributivo, são carregadas no início da sessão.
+
+Já documentos maiores, como regulamento, política de investimentos e históricos detalhados, são consultados dinamicamente conforme a pergunta do usuário.
+
+A estratégia utilizada combina contexto inicial e recuperação dinâmica de informações (RAG), tornando as respostas mais objetivas, eficientes e alinhadas às regras da EFPC.
+
 
 ## Exemplo de Contexto Montado
 
 > Mostre um exemplo de como os dados são formatados para o agente.
 
 ```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+{
+  "participantes": [
+    {
+      "id_participante": "P001",
+      "nome": "Participante 01",
+      "faixa_etaria": "50-55",
+      "status_plano": "Autopatrocinado",
+      "patrocinadora": "BETA",
+      "plano": "Plano Prev",
+      "tempo_plano_anos": 18,
+      "perfil_investimento": "Moderado",
+      "saldo_previdenciario": 285430.75,
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
+      "instituto_previdenciario": {
+        "tipo": "Autopatrocinio",
+        "data_opcao": "2025-03-15"
+      },
+
+      "historico_perfil_investimento": [
+        {
+          "data": "2022-01-10",
+          "perfil": "Conservador"
+        },
+        {
+          "data": "2024-06-20",
+          "perfil": "Moderado"
+        }
+      ],
+
+      "resumo_contribuicoes": {
+        "media_mensal": 1250.00,
+        "ultima_contribuicao": "2026-04",
+        "contribuicoes_12_meses": 15000.00
+      },
+
+      "rentabilidade": {
+        "rentabilidade_12m": "11.2%",
+        "perfil_referencia": "Moderado"
+      }
+    },
+
+    {
+      "id_participante": "P002",
+      "nome": "Participante 02",
+      "faixa_etaria": "60-65",
+      "status_plano": "BPD",
+      "patrocinadora": "BETA",
+      "plano": "Plano Prev",
+      "tempo_plano_anos": 24,
+      "perfil_investimento": "Conservador",
+      "saldo_previdenciario": 412890.10,
+
+      "instituto_previdenciario": {
+        "tipo": "Beneficio Proporcional Diferido",
+        "data_opcao": "2024-09-01"
+      },
+
+      "historico_perfil_investimento": [
+        {
+          "data": "2020-03-11",
+          "perfil": "Moderado"
+        },
+        {
+          "data": "2023-08-15",
+          "perfil": "Conservador"
+        }
+      ],
+
+      "resumo_contribuicoes": {
+        "media_mensal": 980.00,
+        "ultima_contribuicao": "2024-08",
+        "contribuicoes_12_meses": 11760.00
+      },
+
+      "rentabilidade": {
+        "rentabilidade_12m": "9.4%",
+        "perfil_referencia": "Conservador"
+      }
+    },
+    ```json id="8r3kxm"
+{
+  "participantes": [
+    {
+      "id_participante": "P003",
+      "nome": "Participante 03",
+      "status_plano": "Ativo",
+      "patrocinadora": "BETA",
+      "plano": "Plano Prev",
+      "faixa_etaria": "40-45",
+      "tempo_plano_anos": 12,
+      "perfil_investimento": "Moderado",
+
+      "resumo_contribuicoes": {
+        "media_mensal": 980.00,
+        "ultima_contribuicao": "2026-04"
+      },
+
+      "instituto_previdenciario": {
+        "tipo": "Nao Aplicavel"
+      }
+    },
+
+    {
+      "id_participante": "P004",
+      "nome": "Participante 04",
+      "status_plano": "Assistido",
+      "tipo_beneficio": "Aposentadoria",
+      "patrocinadora": "BETA",
+      "plano": "Plano Prev",
+      "faixa_etaria": "65-70",
+      "tempo_plano_anos": 28,
+      "perfil_investimento": "Conservador",
+
+      "beneficio": {
+        "valor_mensal": 8450.00,
+        "inicio_beneficio": "2021-05"
+      },
+
+      "instituto_previdenciario": {
+        "tipo": "Nao Aplicavel"
+      }
+    },
+
+    {
+      "id_participante": "P005",
+      "nome": "Participante 05",
+      "status_plano": "Assistido",
+      "tipo_beneficio": "Pensao",
+      "patrocinadora": "BETA",
+      "plano": "Plano Prev",
+      "faixa_etaria": "55-60",
+      "tempo_plano_anos": 22,
+      "perfil_investimento": "Conservador",
+
+      "beneficio": {
+        "valor_mensal": 4200.00,
+        "inicio_beneficio": "2023-09"
+      },
+
+      "instituto_previdenciario": {
+        "tipo": "Nao Aplicavel"
+      }
+    }
+  ]
+}
 ...
 ```
