@@ -6,13 +6,14 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `extrato_opçoes_instituto.pdf` | PDF | opções previdenciárias realizadas pelo participante após desligamento da patrocinadora ou alteração do vínculo empregatício |
-| `alteracao_perfil_investimento.pdf` | PDF |registros de mudança de perfil de investimento do participante |
-| `extrato_contribuicão.pdf` | PDF | histórico de contribuições mensais realizadas pelo participante e patrocinadora |
-| `estatuto_social_alpha.pdf` | PDF | Documento institucional |
-| `desempenho_dos_investimentos.pdf` | PDF | Documento contendo:	rentabilidade dos perfis,	composição da carteira,	indicadores financeiros |
-| `regulamento_dos_planos.pdf` | PDF | Documento contendo regras do plano previdenciário |
-| `politica_investimento_alpha.pdf` | PDF |Documento contendo as diretrizes de gestão dos recursos garantidores do plano previdenciário  |                                       
+| `extrato_opçoes_instituto.pdf`    | PDF | opções previdenciárias realizadas pelo participante após desligamento da patrocinadora ou alteração do vínculo empregatício |
+| `alteracao_perfil_invest.pdf`     | PDF | registros de mudança de perfil de investimento do participante |
+| `extrato_contribuicão.pdf`        | PDF | histórico de contribuições mensais realizadas pelo participante e patrocinadora |
+| `estatuto_social_alpha.pdf`       | PDF | Documento institucional |
+| `desempenho_dos_investimentos.pdf`| PDF | Documento contendo:	rentabilidade dos perfis,	composição da carteira,	indicadores financeiros |
+| `regulamento_dos_planos.pdf`      | PDF | Documento contendo regras do plano previdenciário |
+| `politica_investimento_alpha.pdf` | PDF | Documento contendo as diretrizes de gestão dos recursos garantidores do plano previdenciário  | 
+| `participantesPrev.json`          | PDF | arquivo contendo informações dos participantes do Plano Prev  | 
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
@@ -240,72 +241,7 @@ A estratégia utilizada combina contexto inicial e recuperação dinâmica de in
         "rentabilidade_12m": "9.4%",
         "perfil_referencia": "Conservador"
       }
-    },
-    ```json id="8r3kxm"
-{
-  "participantes": [
-    {
-      "id_participante": "P003",
-      "nome": "Participante 03",
-      "status_plano": "Ativo",
-      "patrocinadora": "BETA",
-      "plano": "Plano Prev",
-      "faixa_etaria": "40-45",
-      "tempo_plano_anos": 12,
-      "perfil_investimento": "Moderado",
-
-      "resumo_contribuicoes": {
-        "media_mensal": 980.00,
-        "ultima_contribuicao": "2026-04"
-      },
-
-      "instituto_previdenciario": {
-        "tipo": "Nao Aplicavel"
-      }
-    },
-
-    {
-      "id_participante": "P004",
-      "nome": "Participante 04",
-      "status_plano": "Assistido",
-      "tipo_beneficio": "Aposentadoria",
-      "patrocinadora": "BETA",
-      "plano": "Plano Prev",
-      "faixa_etaria": "65-70",
-      "tempo_plano_anos": 28,
-      "perfil_investimento": "Conservador",
-
-      "beneficio": {
-        "valor_mensal": 8450.00,
-        "inicio_beneficio": "2021-05"
-      },
-
-      "instituto_previdenciario": {
-        "tipo": "Nao Aplicavel"
-      }
-    },
-
-    {
-      "id_participante": "P005",
-      "nome": "Participante 05",
-      "status_plano": "Assistido",
-      "tipo_beneficio": "Pensao",
-      "patrocinadora": "BETA",
-      "plano": "Plano Prev",
-      "faixa_etaria": "55-60",
-      "tempo_plano_anos": 22,
-      "perfil_investimento": "Conservador",
-
-      "beneficio": {
-        "valor_mensal": 4200.00,
-        "inicio_beneficio": "2023-09"
-      },
-
-      "instituto_previdenciario": {
-        "tipo": "Nao Aplicavel"
-      }
-    }
-  ]
+      ]
 }
 ...
 ```
