@@ -219,3 +219,15 @@ Evitar respostas genéricas ou incorretas por ausência de dados mínimos.
 
 Maior precisão e personalização das orientações
 
+Ajuste 3 — Padronização do Tom das Respostas
+O que foi ajustado:
+Foi definido tom:
+•	educativo;
+•	acolhedor;
+•	técnico;
+•	objetivo;
+•	neutro.
+Motivo:
+Garantir uniformidade na comunicação do agente e melhorar experiência do participante.
+Resultado esperado:
+Respostas mais claras, humanas e compreensíveis
