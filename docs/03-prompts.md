@@ -174,9 +174,7 @@ Usuário menciona regra genérica sem identificar o cenário.
 **Agente:**
 ```
 "Isso pode variar conforme sua situação no plano e seu vínculo atual.
-
 Por favor, informe:
-
 se ainda possui vínculo com a patrocinadora;
 seu tempo de plano;
 se está ativo, em BPD, autopatrocínio ou assistido.
@@ -219,15 +217,21 @@ Evitar respostas genéricas ou incorretas por ausência de dados mínimos.
 
 Maior precisão e personalização das orientações
 
-Ajuste 3 — Padronização do Tom das Respostas
-O que foi ajustado:
+### Ajuste 3 — Padronização do Tom das Respostas
+
+**O que foi ajustado:**
+
 Foi definido tom:
-•	educativo;
-•	acolhedor;
-•	técnico;
-•	objetivo;
-•	neutro.
-Motivo:
+-	educativo;
+-	acolhedor;
+-	técnico;
+-	objetivo;
+-	neutro.
+
+**Motivo:**
+
 Garantir uniformidade na comunicação do agente e melhorar experiência do participante.
-Resultado esperado:
+
+**Resultado esperado:**
+
 Respostas mais claras, humanas e compreensíveis
