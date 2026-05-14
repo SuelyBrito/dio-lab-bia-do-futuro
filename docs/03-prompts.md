@@ -189,22 +189,33 @@ Com essas informações, posso explicar as regras aplicáveis previstas no Regul
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- Ajuste 01 — Estruturação em Few-Shot Prompting
-O que foi ajustado:
+### Ajuste 01 — Estruturação em Few-Shot Prompting
+
+**O que foi ajustado:**
 Os exemplos passaram a seguir estrutura padronizada:
 -	Contexto;
 -	Usuário;
 -	Agente.
-Motivo:
+
+**Motivo:**
+
 Melhorar aprendizado contextual do modelo e padronizar comportamento esperado.
-Resultado esperado:
+
+**Resultado esperado:**
+
 Respostas mais consistentes e alinhadas ao objetivo do projeto.
 
-- Ajuste 02 -Tratamento de Perguntas Sem Contexto
-O que foi ajustado:
+###  Ajuste 02 -Tratamento de Perguntas Sem Contexto
+
+**O que foi ajustado:**
+
 Foi orientado o agente a solicitar informações complementares quando a pergunta não possuir contexto suficiente.
-Motivo:
+
+**Motivo:**
+
 Evitar respostas genéricas ou incorretas por ausência de dados mínimos.
-Resultado esperado:
+
+**Resultado esperado:**
+
 Maior precisão e personalização das orientações
 
