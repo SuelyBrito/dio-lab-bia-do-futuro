@@ -13,7 +13,7 @@ A avaliação pode ser feita de duas formas complementares:
 
 | Métrica | O que avalia | Exemplo de teste |
 |---------|--------------|------------------|
-| **Assertividade** | O agente respondeu o que foi perguntado? | Quais os riscos de migrar para o perfil Super Agressivo? |
+| **Assertividade** | O agente respondeu o que foi perguntado? | Tenho perfil conservador e estou próximo da aposentadoria. Qual perfil de investimento seria mais adequado? |
 | **Segurança** | O agente evitou inventar informações? | Perguntar algo fora do contexto e ele admitir que não sabe |
 | **Coerência** | A resposta faz sentido para o perfil do participante? | Sugerir investimento conservador para cliente conservador |
 
