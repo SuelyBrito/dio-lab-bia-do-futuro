@@ -26,8 +26,14 @@ A avaliação pode ser feita de duas formas complementares:
 
 Crie testes simples para validar seu agente:
 
+### Teste 1. Governança
+- **Pergunta:** "Quais são as responsabilidades do Conselho Deliberativo?"
+- **Resposta esperada:**
+**O agente:**
 
-### Teste 1. Consulta Básica de Participante
+- **Resultado:** [X] Correto  [ ] Incorreto
+
+### Teste 2 — Consulta Básica de Previdência
 
 **Objetivo**
 Validar se o agente responde corretamente perguntas simples sobre previdência.
@@ -38,31 +44,45 @@ Validar se o agente responde corretamente perguntas simples sobre previdência.
 
 A diferença fundamental entre um Participante Ativo e um Participante Assistido reside no estágio em que se encontram em relação ao plano de previdência: o primeiro está na fase de acumulação de recursos, enquanto o segundo já está na fase de recebimento de benefícios.
 Com base no Regulamento do Plano Prev e nos documentos de suporte, aqui estão as principais distinções:
+
 ## 1. Definição e Vínculo Empregatício
 
 **Participante Ativo:** É o empregado da patrocinadora que requereu sua inscrição no plano e mantém o vínculo empregatício ativo.
 **Participante Assistido:** É todo participante (ou seu beneficiário) que já está em gozo de um benefício mensal pago pelo plano.
 Geralmente, para se tornar assistido, o participante precisa ter concretizado o término do vínculo empregatício com a patrocinadora (exceto em casos de invalidez ou pensão)
 
+- **Resultado:** [X] Correto  [ ] Incorreto
 
+### Teste 3: Recomendação de Perfil de Investimento
+**Objetivo**
 
-### Teste 1: Consulta de gastos
-- **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
+Verificar se o agente realiza recomendações coerentes com o perfil do participante.
+
+- **Pergunta:** “Tenho perfil conservador e estou próximo da aposentadoria. Qual perfil de investimento seria mais adequado?”
+- **Resposta esperada:** 
+
 - **Resultado:** [ ] Correto  [ ] Incorreto
 
-### Teste 2: Recomendação de produto
-- **Pergunta:** "Qual investimento você recomenda para mim?"
+### Teste 4: Contribuições
+- **Pergunta:** "Como funciona a contribuição do participante?"
 - **Resposta esperada:** Produto compatível com o perfil do cliente
 - **Resultado:** [ ] Correto  [ ] Incorreto
 
-### Teste 3: Pergunta fora do escopo
+### Teste 5: Pergunta fora do escopo
+
+**Objetivo**
+Validar a segurança do agente diante de perguntas não relacionadas ao tema.
+
 - **Pergunta:** "Qual a previsão do tempo?"
 - **Resposta esperada:** Agente informa que só trata de finanças
 - **Resultado:** [ ] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto XYZ?"
+
+**Objetivo**
+Verificar se o agente evita inventar informações
+
+- **Pergunta:** "Quanto rende exatamente o perfil XYZ no próximo mês?”
 - **Resposta esperada:** Agente admite não ter essa informação
 - **Resultado:** [ ] Correto  [ ] Incorreto
 
@@ -73,10 +93,26 @@ Geralmente, para se tornar assistido, o participante precisa ter concretizado o 
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- [Liste aqui]
+
+-	Clareza nas respostas;
+-	Boa contextualização sobre previdência complementar;
+-	Respostas coerentes com o perfil do participante;
+-	Segurança ao admitir limitações de informação.
+
 
 **O que pode melhorar:**
-- [Liste aqui]
+
+- O agente de IA apresenta dificuldade em responder perguntas específicas utilizando o conteúdo da cartilha.
+-	As respostas estão muito genéricas e pouco aderentes às regras do plano.
+
+
+**Problemas identificados e melhorias implementadas**
+
+-	O PDF original possuía limitações de OCR, dificultando a leitura correta do texto.
+-	Parte do conteúdo da cartilha não era corretamente convertida em embeddings.
+-	O sistema de busca vetorial (RAG) não recuperava trechos relevantes em algumas consultas.
+-	Possível utilização de embeddings antigos após atualização do documento.
+
 
 ---
 
