@@ -29,7 +29,10 @@ Crie testes simples para validar seu agente:
 ### Teste 1. Governança
 - **Pergunta:** "Quais são as responsabilidades do Conselho Deliberativo?"
 - **Resposta esperada:**
+
 **O agente:**
+
+O Conselho Deliberativo é responsável por deliberar sobre alterações no Estatuto do Alpha, inclusive aquelas decorrentes de lei, e sobre alterações nos regulamentos dos planos de benefícios e dos planos de assistência à saúde, bem como sobre a instituição ou extinção desses planos. Além disso, pode exercer outras atribuições previstas no Estatuto, em Regimento Interno próprio e na legislação vigente.
 
 - **Resultado:** [X] Correto  [ ] Incorreto
 
@@ -42,15 +45,32 @@ Validar se o agente responde corretamente perguntas simples sobre previdência.
 
 **O agente:**
 
-A diferença fundamental entre um Participante Ativo e um Participante Assistido reside no estágio em que se encontram em relação ao plano de previdência: o primeiro está na fase de acumulação de recursos, enquanto o segundo já está na fase de recebimento de benefícios.
-Com base no Regulamento do Plano Prev e nos documentos de suporte, aqui estão as principais distinções:
+Com base nos documentos fornecidos:
+-	Participante ativo é aquele que ainda está contribuindo para o plano, normalmente enquanto mantém vínculo empregatício com o patrocinador.
+-	Participante assistido é aquele que já começou a receber um benefício mensal do plano, como aposentadoria, pensão ou outro benefício de prestação continuada.
+Ou seja, o ativo ainda acumula recursos, enquanto o assistido já usufrui dos benefícios do plano.
 
-## 1. Definição e Vínculo Empregatício
+- **Resultado:** [X] Correto  [ ] Incorreto
 
-**Participante Ativo:** É o empregado da patrocinadora que requereu sua inscrição no plano e mantém o vínculo empregatício ativo.
-**Participante Assistido:** É todo participante (ou seu beneficiário) que já está em gozo de um benefício mensal pago pelo plano.
-Geralmente, para se tornar assistido, o participante precisa ter concretizado o término do vínculo empregatício com a patrocinadora (exceto em casos de invalidez ou pensão)
 
+**Pergunta:** Tenho 52 anos e 10 anos de contribuição. Posso solicitar aposentadoria?
+
+**Resposta esperada:**
+
+**O agente:**
+Com base no Regulamento Prev Alpha, para solicitar o benefício de aposentadoria normalmente, é necessário:
+-	Ter, no mínimo, 53 anos de idade;
+-	Ter, no mínimo, 60 meses (5 anos) de vinculação ao PREV;
+-	Ter encerrado o vínculo empregatício com o patrocinador.
+Você já possui 10 anos de contribuição (mais do que os 60 meses exigidos), mas ainda não completou 53 anos de idade.
+Porém, há uma exceção importante:
+O regulamento permite requerer o benefício de aposentadoria antes de completar 53 anos, desde que cumpra as demais condições (ou seja, tempo de vinculação e término do vínculo empregatício).
+Faltam informações para concluir:
+Você não informou se já encerrou o vínculo empregatício com o patrocinador.
+Se já tiver encerrado esse vínculo, você pode solicitar a aposentadoria mesmo antes dos 53 anos, conforme a exceção prevista no regulamento.
+**Resumo:**
+-	Se já encerrou o vínculo empregatício com o patrocinador, pode solicitar a aposentadoria.
+-	Se ainda está trabalhando no patrocinador, precisa primeiro encerrar o vínculo para poder solicitar.
 - **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 3: Recomendação de Perfil de Investimento
@@ -59,23 +79,24 @@ Geralmente, para se tornar assistido, o participante precisa ter concretizado o 
 Verificar se o agente realiza recomendações coerentes com o perfil do participante.
 
 - **Pergunta:** “Tenho perfil conservador e estou próximo da aposentadoria. Qual perfil de investimento seria mais adequado?”
-- **Resposta esperada:** 
+- **Resposta esperada:**
+ **O agente:**
+Considerando que você tem perfil conservador e está próximo da aposentadoria, o perfil de investimento mais adequado é o Perfil Conservador.
+Segundo a Cartilha Perfis Prev, esse perfil é recomendado para participantes com baixa tolerância a risco e pouco tempo para requerer a aposentadoria, pois prioriza a preservação do valor investido e a liquidez, reduzindo o risco de oscilações que podem impactar negativamente o seu saldo próximo do momento de se aposentar.
 
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [X] Correto  [ ] Incorreto
 
-### Teste 4: Contribuições
-- **Pergunta:** "Como funciona a contribuição do participante?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
 
-### Teste 5: Pergunta fora do escopo
+### Teste 4: Pergunta fora do escopo
 
 **Objetivo**
 Validar a segurança do agente diante de perguntas não relacionadas ao tema.
 
 - **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** 
+**O agente:**
+Posso responder apenas perguntas relacionadas à previdência complementar e aos documentos carregados.
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
 
@@ -83,8 +104,10 @@ Validar a segurança do agente diante de perguntas não relacionadas ao tema.
 Verificar se o agente evita inventar informações
 
 - **Pergunta:** "Quanto rende exatamente o perfil XYZ no próximo mês?”
-- **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:**
+**O agente:**
+Não é possível informar exatamente quanto o perfil XYZ irá render no próximo mês. O extrato fornecido mostra apenas valores históricos de contribuições, pagamentos e movimentações, mas não apresenta informações sobre o perfil XYZ, nem projeções ou regras de rentabilidade futura. Para saber o rendimento exato, seria necessário ter acesso à política de investimentos do perfil XYZ e à rentabilidade projetada ou garantida, caso exista.
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ---
 
@@ -112,7 +135,6 @@ Após os testes, registre suas conclusões:
 -	Parte do conteúdo da cartilha não era corretamente convertida em embeddings.
 -	O sistema de busca vetorial (RAG) não recuperava trechos relevantes em algumas consultas.
 -	Possível utilização de embeddings antigos após atualização do documento.
-
 
 ---
 
