@@ -126,7 +126,7 @@ As seguintes modificações foram aplicadas:
 - substituição dos nomes das patrocinadoras por “BETA” e “GAMA”
 - retirada de logotipos e elementos de identificação visual
 - anonimização de dados cadastrais e financeiros
-- adequação dos documentos para fins exclusivamente educacionais e acadêmicos[Sua descrição aqui]
+- adequação dos documentos para fins exclusivamente educacionais e acadêmicos.
 
 ---
 
