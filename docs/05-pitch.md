@@ -38,7 +38,8 @@ O objetivo é transformar informações previdenciárias complexas em respostas 
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
 
-[Descreva o que será mostrado]
+<img width="1305" height="617" alt="telaIAinteligente" src="https://github.com/user-attachments/assets/742e5e69-bf6a-4b09-b184-b013eba4a2d7" />
+
 
 ### 4. Diferencial e Impacto (30 seg)
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
