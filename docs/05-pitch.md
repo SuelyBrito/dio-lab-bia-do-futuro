@@ -8,12 +8,32 @@
 ### 1. O Problema (30 seg)
 > Qual dor do cliente você resolve?
 
-[Sua descrição aqui]
+As Entidades Fechadas de Previdência Complementar administram regulamentos complexos, normas da PREVIC, contratos, cálculos e informações técnicas difíceis de interpretar rapidamente.
+Participantes e equipes internas muitas vezes têm dúvidas sobre:
+-	regras do plano;
+-	aposentadoria;
+-	contribuição variável;
+-	benefícios;
+-	regulamentos;
+-	direitos e obrigações.
+A busca manual dessas informações em documentos extensos consome tempo, gera retrabalho e aumenta o risco de interpretações incorretas.
+
 
 ### 2. A Solução (1 min)
 > Como seu agente resolve esse problema?
 
-[Sua descrição aqui]
+Meu projeto é um Agente Inteligente de IA especializado em Previdência Complementar para Entidades Fechadas com planos de Contribuição Variável.
+O agente utiliza Inteligência Artificial para compreender regulamentos, documentos técnicos e normas previdenciárias, permitindo que usuários conversem com os documentos de forma simples e natural.
+A solução consegue:
+-	interpretar regulamentos do plano;
+-	responder dúvidas sobre benefícios e contribuições;
+-	localizar informações rapidamente;
+-	resumir documentos complexos;
+-	auxiliar equipes técnicas e participantes;
+-	agilizar consultas internas.
+Tudo isso em uma interface intuitiva, rápida e acessível.
+O objetivo é transformar informações previdenciárias complexas em respostas claras, seguras e inteligentes.
+
 
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
@@ -23,7 +43,17 @@
 ### 4. Diferencial e Impacto (30 seg)
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
 
-[Sua descrição aqui]
+O diferencial da solução é a especialização em Previdência Complementar, um setor altamente técnico e regulado.
+O agente não apenas busca palavras-chave: ele compreende contexto, interpreta documentos e facilita o acesso às informações previdenciárias.
+O impacto da solução inclui:
+-	mais agilidade no atendimento;
+-	redução de tempo em consultas;
+-	apoio às equipes técnicas;
+-	melhor experiência para participantes;
+-	democratização do acesso à informação previdenciária.
+É uma ferramenta que aproxima tecnologia e previdência, trazendo inovação para um setor essencial para o futuro das pessoas.
+________________________________________
+
 
 ---
 
@@ -41,4 +71,4 @@
 
 > Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
 
-[https://youtu.be/6B9ei7UQRRE]
+https://youtu.be/6B9ei7UQRRE
